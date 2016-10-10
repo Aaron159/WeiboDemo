@@ -1,0 +1,74 @@
+//
+//  PrefixHeader.pch
+//  HZ85_Weibo
+//
+//  Created by ZhuJiaCong on 16/7/29.
+//  Copyright © 2016年 ZhuJiaCong. All rights reserved.
+//
+
+//PCH文件 使用方法说明：http://www.tuicool.com/articles/beURbe
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//------------------------Header------------------------
+#import "ThemeManager.h"
+#import "WeiboModel.h"
+#import "UserModel.h"
+#import "UIImageView+WebCache.h"
+#import "UIViewExt.h"
+#import "RegexKitLite.h"
+#import "MMExampleDrawerVisualStateManager.h"
+#import "MBProgressHUD.h"
+
+//------------------------宏定义------------------------
+
+//系统版本号  CGFloat
+#define kSystemVersion ([[UIDevice currentDevice].systemVersion floatValue])
+
+//屏幕宽高
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+//微博对象获取
+#define kSinaWeiboObject (((AppDelegate *)[UIApplication sharedApplication].delegate).sinaWeibo)
+
+//主题切换的通知名
+#define kThemeChangedNotificationName @"kThemeChangedNotificationName"
+//HomeViewController发通知
+#define kHomeViewController @"kHomeViewController"
+//传表情的
+#define kEmoticonViewNoti @"kEmoticonViewNoti"
+
+//SinaWeibo SDK
+#import "SinaWeibo.h"
+
+
+//------------------------字体颜色------------------------
+//More界面单元格字体颜色
+#define kMoreItemTextColor @"More_Item_Text_color"
+//More界面，表视图中单元格分割线颜色
+#define kMoreItemLineColor @"More_Item_Line_color"
+//Home 微博正文颜色
+#define kHomeWeiboTextColor @"Timeline_Content_color"
+//Home 转发微博正文颜色
+#define kHomeReWeiboTextColor @"Detail_Content_color"
+//Home 时间/来源文本颜色
+#define kHomeTimeLabelTextColor @"Timeline_Time_color"
+//Home 用户名文本颜色
+#define kHomeUserNameTextColor @"Timeline_Name_color"
+//微博正文中 超链接文本颜色
+#define kLinkColor @"Link_color"
+
+//------------------------字体大小------------------------
+//微博正文字体大小
+#define kWeiboTextFont [UIFont systemFontOfSize:16]
+//转发微博字体大小
+#define kReWeiboTextFont [UIFont systemFontOfSize:14]
+
+//行间距
+#define LineSpace 3
+
+
+
+#endif /* PrefixHeader_pch */
